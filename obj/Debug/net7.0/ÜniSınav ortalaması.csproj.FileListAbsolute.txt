@@ -1,0 +1,14 @@
+C:\Users\Taha\OneDrive\Masaüstü\ÜniSınav ortalaması\bin\Debug\net7.0\ÜniSınav ortalaması.exe
+C:\Users\Taha\OneDrive\Masaüstü\ÜniSınav ortalaması\bin\Debug\net7.0\ÜniSınav ortalaması.deps.json
+C:\Users\Taha\OneDrive\Masaüstü\ÜniSınav ortalaması\bin\Debug\net7.0\ÜniSınav ortalaması.runtimeconfig.json
+C:\Users\Taha\OneDrive\Masaüstü\ÜniSınav ortalaması\bin\Debug\net7.0\ÜniSınav ortalaması.dll
+C:\Users\Taha\OneDrive\Masaüstü\ÜniSınav ortalaması\bin\Debug\net7.0\ÜniSınav ortalaması.pdb
+C:\Users\Taha\OneDrive\Masaüstü\ÜniSınav ortalaması\obj\Debug\net7.0\ÜniSınav ortalaması.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Taha\OneDrive\Masaüstü\ÜniSınav ortalaması\obj\Debug\net7.0\ÜniSınav ortalaması.AssemblyInfoInputs.cache
+C:\Users\Taha\OneDrive\Masaüstü\ÜniSınav ortalaması\obj\Debug\net7.0\ÜniSınav ortalaması.AssemblyInfo.cs
+C:\Users\Taha\OneDrive\Masaüstü\ÜniSınav ortalaması\obj\Debug\net7.0\ÜniSınav ortalaması.csproj.CoreCompileInputs.cache
+C:\Users\Taha\OneDrive\Masaüstü\ÜniSınav ortalaması\obj\Debug\net7.0\ÜniSınav ortalaması.dll
+C:\Users\Taha\OneDrive\Masaüstü\ÜniSınav ortalaması\obj\Debug\net7.0\refint\ÜniSınav ortalaması.dll
+C:\Users\Taha\OneDrive\Masaüstü\ÜniSınav ortalaması\obj\Debug\net7.0\ÜniSınav ortalaması.pdb
+C:\Users\Taha\OneDrive\Masaüstü\ÜniSınav ortalaması\obj\Debug\net7.0\ÜniSınav ortalaması.genruntimeconfig.cache
+C:\Users\Taha\OneDrive\Masaüstü\ÜniSınav ortalaması\obj\Debug\net7.0\ref\ÜniSınav ortalaması.dll
