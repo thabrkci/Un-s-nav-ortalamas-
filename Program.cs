@@ -49,7 +49,7 @@ class Program
         public string ?Surname;
         public long TcNo;
        
-        public void Personelinfo1()//Kullanıcıdan isim soyisim ve tc kimlik no alan metot
+         public void Personelinfo1()//Kullanıcıdan isim soyisim ve tc kimlik no alan metot
        {
          Console.WriteLine("Hoşgeldiniz, Lütfen Bilgilerinizi Giriniz.");
 
@@ -96,16 +96,9 @@ class Program
          return true;
     
    
+       }
+     }
   }
- 
-  
-
-
-    }
-
-   
-  }
-
   
 
 
