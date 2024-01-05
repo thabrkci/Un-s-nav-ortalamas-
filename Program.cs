@@ -11,8 +11,6 @@ class Program
         Personelinfo personelinfo = new();//Personel info sınıfından kalıtım aldık.
         personelinfo.Personelinfo1();//Aldığımız kalıtım sonra personelinfo1 metodunu kullandık.
         Console.WriteLine("Hoşgeldiniz:|||"+personelinfo.Name+personelinfo.Surname);
-        
-        
         int Universty;
         Console.WriteLine("Lütfen Üniversite Sınav sonucunuzu Giriniz.");
         while(!int.TryParse(Console.ReadLine(),out Universty) || Universty<=0)//Kullanıcı Positif bir sayı veya pozitif bir sayı girene kadar while döngüsü devam edecektir
@@ -20,7 +18,6 @@ class Program
             Console.WriteLine(" Lütfen geçerli bir sayı girin ?");//Geçerli bir sayı girilmediğinde uyarı verecektir.
             Console.Write("Lütfen geçerli bir puan gir!"); //Geçerli bir sayı girilmesi için uyarı verilecektir.
         }
-
          int Universtylogin = Universty;
          Console.WriteLine("Girmiş olduğun puan--->{0}",+Universtylogin);//Girilen puan çıktısı kullanıcıya gösterme.
 
@@ -45,16 +42,16 @@ class Program
 }
 
 
-public class Personelinfo//Kullanıcıdan isim soyisim ve tc kimlik no saklayan Sınıf
-{
+        public class Personelinfo//Kullanıcıdan isim soyisim ve tc kimlik no saklayan Sınıf
+      {
   
-  public string ?Name;
-  public string ?Surname;
-  public long TcNo;
-  
-  public void Personelinfo1()//Kullanıcıdan isim soyisim ve tc kimlik no alan metot
-  {
-      Console.WriteLine("Hoşgeldiniz, Lütfen Bilgilerinizi Giriniz.");
+        public string ?Name;
+        public string ?Surname;
+        public long TcNo;
+       
+        public void Personelinfo1()//Kullanıcıdan isim soyisim ve tc kimlik no alan metot
+       {
+         Console.WriteLine("Hoşgeldiniz, Lütfen Bilgilerinizi Giriniz.");
 
         Console.Write("Name: ");
         Name = Console.ReadLine();
@@ -80,8 +77,6 @@ public class Personelinfo//Kullanıcıdan isim soyisim ve tc kimlik no saklayan 
 
         Console.Write("TcNo: ");
         long.TryParse(Console.ReadLine(), out TcNo);
-
-
 
          static bool Lettercheck(string ?word)
        { 
