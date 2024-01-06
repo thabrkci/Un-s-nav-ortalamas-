@@ -1,5 +1,5 @@
 Herkese selam,
-Bu örneğimde kullanıcıdan isim soyisim ve Tc kimlik no alan,girilen sınav sonucuna göre birkaç üniversite öneren bir kod yazmaya çalıştım.
+Bu örneğimde kullanıcıdan isim soyisim ve alan,girilen sınav sonucuna göre birkaç üniversite öneren bir kod yazmaya çalıştım.
 Gerekli açıklamalara yorum satırlarından ulaşabilirsiniz.
 Vaktinizi ayırdığınız için teşekkür ederim.
 ------------------------------------

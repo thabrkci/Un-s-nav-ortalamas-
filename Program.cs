@@ -1,104 +1,72 @@
-﻿using System.Linq.Expressions;
-using System.Security.Cryptography.X509Certificates;
+﻿using System;
 
-namespace ÜniSınav_ortalaması;
-
-class Program
+namespace UniversityExamAverage
 {
-    static void Main(string[] args)
-    {   
-        
-        Personelinfo personelinfo = new();//Personel info sınıfından kalıtım aldık.
-        personelinfo.Personelinfo1();//Aldığımız kalıtım sonra personelinfo1 metodunu kullandık.
-        Console.WriteLine("Hoşgeldiniz:|||"+personelinfo.Name+personelinfo.Surname);
-        int Universty;
-        Console.WriteLine("Lütfen Üniversite Sınav sonucunuzu Giriniz.");
-        while(!int.TryParse(Console.ReadLine(),out Universty) || Universty<=0)//Kullanıcı Positif bir sayı veya pozitif bir sayı girene kadar while döngüsü devam edecektir
+    class Program
+    {
+        static void Main(string[] args)
         {
-            Console.WriteLine(" Lütfen geçerli bir sayı girin ?");//Geçerli bir sayı girilmediğinde uyarı verecektir.
-            Console.Write("Lütfen geçerli bir puan gir!"); //Geçerli bir sayı girilmesi için uyarı verilecektir.
-        }
-         int Universtylogin = Universty;
-         Console.WriteLine("Girmiş olduğun puan--->{0}",+Universtylogin);//Girilen puan çıktısı kullanıcıya gösterme.
+            // Create an instance of the PersonInfo class
+            PersonInfo personInfo = new PersonInfo();
+            // Get personal information from the user
+            personInfo.GetInfo();
 
-        //Puan çıktısı sonucuna göre yazdırılan kod bloğu.
-        if (Universtylogin >= 400 && Universtylogin <= 500)
-        {
-            Console.WriteLine(personelinfo.Name+"  Tebrikler!Trabzon hukuk yazabilirsin veya Rize Hukuk.");
-        }
-        else if(Universtylogin<=400 & Universtylogin>=300)
-        {
-            Console.WriteLine(personelinfo.Name+"  Tebrikler! Güzel puan Erzurum hukuk deneyebilirsin veya bunları \n Ankara hukuk,Antep hukuk.");
-            
-        }
-       else
-       {
-         Console.WriteLine(personelinfo.Name+"  Tekrar ders çalışmanda Fayda var gibi ne dersin ?");
-         
+            // Display a welcome message with the user's name and surname
+            Console.WriteLine($"Welcome:||| {personInfo.Name} {personInfo.Surname}");
 
-       }
+            int universityScore;
+            Console.WriteLine("Please enter your University Exam score.");
+
+            // Validate and get the University Exam score from the user
+            while (!int.TryParse(Console.ReadLine(), out universityScore) || universityScore <= 0)
+            {
+                Console.WriteLine("Please enter a valid number.");
+                Console.Write("Please enter a valid score: ");
+            }
+
+            // Display the entered score
+            Console.WriteLine($"Your entered score: {universityScore}");
+
+            // Evaluate the score and provide recommendations
+            if (universityScore >= 400 && universityScore <= 500)
+            {
+                Console.WriteLine($"{personInfo.Name} Congratulations! You can consider Trabzon Law or Rize Law.");
+            }
+            else if (universityScore >= 300 && universityScore < 400)
+            {
+                Console.WriteLine($"{personInfo.Name} Congratulations! Good score, you can try Erzurum Law or these Ankara Law, Gaziantep Law.");
+            }
+            else
+            {
+                Console.WriteLine($"{personInfo.Name} It looks like you might need to study again. What do you think?");
+            }
+        }
     }
-       
+
+    // Class for storing personal information
+    public class PersonInfo
+    {
+        // Properties for Name and Surname
+        public string ?Name { get; set; }
+        public string ?Surname { get; set; }
+        public long Tcno { get; set ;}
+
+        // Method to get personal information from the user
+        public void GetInfo()
+        {
+            Console.WriteLine("Welcome, Please Enter Your Information.");
+
+            // Get user input for Name and Surname
+            Name = GetUserInput("Name");
+            Surname = GetUserInput("Surname");
+            Tcno = Convert.ToInt32(GetUserInput("Tcno:"));
+        }
+
+        // Helper method to get user input for a specific field
+        static string GetUserInput(string fieldName)
+        {
+            Console.Write($"{fieldName}: ");
+            return Console.ReadLine();
+        }
+    }
 }
-
-
-        public class Personelinfo//Kullanıcıdan isim soyisim ve tc kimlik no saklayan Sınıf
-      {
-  
-        public string ?Name;
-        public string ?Surname;
-        public long TcNo;
-       
-         public void Personelinfo1()//Kullanıcıdan isim soyisim ve tc kimlik no alan metot
-       {
-         Console.WriteLine("Hoşgeldiniz, Lütfen Bilgilerinizi Giriniz.");
-
-        Console.Write("Name: ");
-        Name = Console.ReadLine();
-
-        // Adın sadece harflerden oluşup oluşmadığını kontrol et
-        while (!Lettercheck(Name))
-        {
-            Console.WriteLine("Geçerli bir isim girin.");
-            Console.Write("Name: ");
-            Name = Console.ReadLine();
-        }
-
-        Console.Write("Surname: ");
-        Surname = Console.ReadLine();
-
-        // Soyadın sadece harflerden oluşup oluşmadığını kontrol et
-        while (!Lettercheck(Surname))
-        {
-            Console.WriteLine("Geçerli bir soyisim girin.");
-            Console.Write("Surname: ");
-            Surname = Console.ReadLine();
-        }
-
-        Console.Write("TcNo: ");
-        long.TryParse(Console.ReadLine(), out TcNo);
-
-         static bool Lettercheck(string ?word)
-       { 
-         if (word == null)
-         {
-          return false;
-         } 
-
-
-         foreach(char check in word)
-       {
-         if(!char.IsLetter(check))
-       {
-         return false;
-       }
-       }
-         return true;
-    
-   
-       }
-     }
-  }
-  
-
-
